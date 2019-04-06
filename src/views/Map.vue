@@ -1,16 +1,36 @@
 <template>
-  <div id="map" ref="map" style="height: 100%;"></div>
+  <div style="height: 100%;">
+    <div ref="popup">
+      <MapPopup :value="value" />
+    </div>
+    <div ref="map" style="height: 100%;"></div>
+  </div>
 </template>
 
 <script>
 import Map from "./../core/map";
-import { MarkerClusterer, createGeolocationMarker } from "./../core/map";
+import {
+  MarkerClusterer,
+  createGeolocationMarker,
+  createPopupClass
+} from "./../core/map";
 
 import data from "./../core/db";
 
+import MapPopup from "./../components/MapPopup";
+
 export default {
+  components: {
+    MapPopup
+  },
+  data: () => ({
+    innerHTML: "",
+    value: 0
+  }),
   mounted() {
     var el = this.$refs.map;
+    var el2 = this.$refs.popup;
+
     Map.load(function(google) {
       var GeolocationMarker = createGeolocationMarker(google);
       var markers = {
@@ -21,7 +41,7 @@ export default {
 
       var map = new google.maps.Map(el, {
         zoom: 15,
-        center: { lat: 13.7459861, lng: 100.4888467 },
+        center: { lat: 13.7458265, lng: 100.5238205 },
         mapTypeId: google.maps.MapTypeId.ROADMAP
       });
 
@@ -107,7 +127,7 @@ export default {
       new MarkerClusterer(map, markers["garbage"], {
         imagePath: "/img/map/m",
         averageCenter: true,
-        maxZoom: 21
+        maxZoom: 20
       });
 
       /* Change markers on zoom */
@@ -128,6 +148,11 @@ export default {
         //   ]
         // });
       });
+
+      var Popup = createPopupClass(google);
+      var popup = new Popup(new google.maps.LatLng(-33.866, 151.196), el2);
+
+      popup.setMap(map);
     });
   }
 };

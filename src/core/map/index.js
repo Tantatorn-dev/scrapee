@@ -8,5 +8,6 @@ export default GoogleMapsLoader;
 
 import MarkerClusterer from "./markerclusterer";
 import createGeolocationMarker from "./geolocationmarker";
+import createPopupClass from "./mappopup";
 
-export { MarkerClusterer, createGeolocationMarker };
+export { MarkerClusterer, createGeolocationMarker, createPopupClass };

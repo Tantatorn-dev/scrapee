@@ -67,7 +67,7 @@ function createGeolocationMarker(google) {
       strokeColor: "1bb6ff",
       strokeOpacity: 0.25,
       fillColor: "61a0bf",
-      fillOpacity: 0.07,
+      fillOpacity: 0.05,
       strokeWeight: 1,
       zIndex: 1
     };
