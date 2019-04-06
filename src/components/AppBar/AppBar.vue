@@ -1,6 +1,8 @@
 <template>
   <v-toolbar app>
-    <v-img :src="require('@/assets/justchange.png')"></v-img>
+    <a href="/">
+    <img :src="require('@/assets/justchange.png')">
+    </a>
     <v-spacer></v-spacer>
     <v-btn
       flat
