@@ -57,6 +57,13 @@ export default new Router({
       name: "reward",
       component: () =>
         import(/*webpackChunkName: "achievement*/ "./views/Reward.vue")
+    },
+
+    {
+      path: "/profile",
+      name: "profile",
+      component: () =>
+        import(/*webpackChunkName: "achievement*/ "./views/Profile.vue")
     }
   ]
 });
