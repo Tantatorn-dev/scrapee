@@ -1,6 +1,6 @@
 <template>
   <v-toolbar prominent extended>
-    
+
     <v-toolbar-title>Title</v-toolbar-title>
     <v-spacer></v-spacer>
     <v-btn flat to="/about">
@@ -9,8 +9,8 @@
     <login-modal></login-modal>
 
     <template v-slot:extension>
-      <v-layout justify-center align-center>
       <Category></Category>
+      <v-layout justify-center align-center>
       <SearchField></SearchField>
       </v-layout>
     </template>

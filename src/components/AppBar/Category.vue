@@ -3,8 +3,10 @@
     <v-menu offset-y>
       <template v-slot:activator="{ on }">
         <v-btn
+          large
           color="#FFFFFF"
           v-on="on"
+          class="dropdown"
         >
           Category
         </v-btn>
@@ -34,3 +36,9 @@
     })
   }
 </script>
+
+<style scoped>
+.dropdown{
+  margin-bottom: 15px;
+}
+</style>
