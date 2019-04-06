@@ -3,8 +3,11 @@
 </template>
 
 <script>
-import Map from "./../core/map";
-import { MarkerClusterer, createGeolocationMarker } from "./../core/map";
+import Map from "./../core/map/index.js";
+import {
+  MarkerClusterer,
+  createGeolocationMarker
+} from "./../core/map/index.js";
 
 export default {
   mounted() {
