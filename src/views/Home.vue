@@ -4,6 +4,9 @@
       <h2 class="display-1 font-weight-thin text-1">Collected garbage</h2>
       <h1 class="display-5 font-weight-medium mb-3 text-2">1,400,323 tons</h1>
     </v-layout>
+    <v-layout justify-center align-center column>
+      <v-btn color="success">Change now!</v-btn>
+    </v-layout>
   </v-parallax>
 </template>
 
