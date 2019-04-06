@@ -1,6 +1,6 @@
 <template>
   <v-carousel>
-    <v-carousel-item v-bind:src="require('@/assets/homeBG1.jpg')" class="dim">
+    <v-carousel-item v-bind:src="require('@/assets/homeBG1.jpg')" >
       <v-layout align-center column>
         <h1 class="display-5 font-weight-medium mb-3 text-1" >Only 12.5% of e-waste is currently recycled.</h1>
       </v-layout>

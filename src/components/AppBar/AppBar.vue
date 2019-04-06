@@ -11,8 +11,10 @@
     <v-btn color="#013101" dark>Sign up</v-btn>
     <v-btn outline color="#013101">Log in</v-btn>
     <template v-slot:extension>
+      <v-layout justify-center align-center>
       <Category></Category>
       <SearchField></SearchField>
+      </v-layout>
     </template>
   </v-toolbar>
 </template>
