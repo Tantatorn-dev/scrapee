@@ -1,6 +1,6 @@
 <template>
   <v-toolbar app>
-    <v-img v-bind:src="require('@/assets/justchange.png')"></v-img>
+    <v-img :src="require('@/assets/justchange.png')"></v-img>
     <v-spacer></v-spacer>
     <v-btn
       flat
@@ -9,11 +9,7 @@
     >
       <span class="mr-2">About</span>
     </v-btn>
-    <v-btn
-      flat
-      href="https://github.com/vuetifyjs/vuetify/releases/latest"
-      target="_blank"
-    >
+    <v-btn flat to="/map">
       <span class="mr-2">ChangeNow</span>
     </v-btn>
 
