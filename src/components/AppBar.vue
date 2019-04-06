@@ -1,7 +1,6 @@
 <template>
-  <v-toolbar app
-    ><v-img v-bind:src="require('@/assets/justchange.png')"></v-img>
-    <v-toolbar-title class="img"> </v-toolbar-title>
+  <v-toolbar app>
+    <v-img v-bind:src="require('@/assets/justchange.png')"></v-img>
     <v-spacer></v-spacer>
     <v-btn
       flat
