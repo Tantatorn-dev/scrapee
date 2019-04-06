@@ -14,7 +14,7 @@ import LoginModal from './components/LoginModal/LoginModal';
 export default {
   name: "App",
   components: {
-    AppBar
+    AppBar,
     LoginModal
   },
   data() {
