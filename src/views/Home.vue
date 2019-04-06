@@ -1,7 +1,7 @@
 <template>
   <v-parallax dark v-bind:src="require('@/assets/homeBG.png')">
     <v-layout align-center column>
-      <h2 class="display-1 font-weight-thin text-1">Collected garbage</h2>
+      <h2 class="display-6 font-weight-thin text-1">Collected garbage</h2>
       <h1 class="display-5 font-weight-medium mb-3 text-2">1,400,323 tons</h1>
     </v-layout>
     <v-layout justify-center align-center column>
