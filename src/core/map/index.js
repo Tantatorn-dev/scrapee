@@ -5,3 +5,8 @@ GoogleMapsLoader.LIBRARIES = ["drawing"];
 GoogleMapsLoader.VERSION = "weekly";
 
 export default GoogleMapsLoader;
+
+import MarkerClusterer from "./markerclusterer";
+import createGeolocationMarker from "./geolocationmarker";
+
+export { MarkerClusterer, createGeolocationMarker };
