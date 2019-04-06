@@ -1,15 +1,13 @@
 <template>
   <v-toolbar prominent extended>
+    
     <v-toolbar-title>Title</v-toolbar-title>
-
     <v-spacer></v-spacer>
-
-    <v-btn flat href="https://github.com/vuetifyjs/vuetify/releases/latest" target="_blank">
+    <v-btn flat to="/about">
       <span class="mr-2">About</span>
     </v-btn>
+    <login-modal></login-modal>
 
-    <v-btn color="#013101" dark>Sign up</v-btn>
-    <v-btn outline color="#013101">Log in</v-btn>
     <template v-slot:extension>
       <v-layout justify-center align-center>
       <Category></Category>
@@ -22,12 +20,18 @@
 <script>
 import Category from "./Category";
 import SearchField from "./SearchField";
-
+import LoginModal from "../LoginModal/LoginModal.vue";
 export default {
   name: "AppBar",
   components: {
     Category,
-    SearchField
+    SearchField,
+    LoginModal
+  },
+  data(){
+    return{
+      onPopUp:false
+    }
   }
 };
 </script>

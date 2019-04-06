@@ -2,7 +2,7 @@
   <div class="text-xs-center">
     <v-dialog v-model="isSignin" width="400">
       <v-card class="float-card" v-if="LoginContext === 'Login' && active" key="login">
-        <v-card-title class="headline center-title">แอพกุยังไม่เสร็จ</v-card-title>
+        <v-card-title class="headline center-title">LOG IN</v-card-title>
         <v-form>
           <v-container>
             <v-layout wrap row justify-center>
@@ -14,30 +14,30 @@
               </v-flex>
               <v-flex md9 justify-center>
                 <div class="div-center">
-                  <v-btn color="primary">Sign &nbsp;in</v-btn>
+                  <v-btn color="primary">Log &nbsp;in</v-btn>
                   <v-btn color="primary" @click="LoginContext = 'Reg'">Register</v-btn>
                 </div>
               </v-flex>
             </v-layout>
           </v-container>
         </v-form>
-        <hr class="hr-text" data-content="Or Sign in with">
+        <hr class="hr-text" data-content="Or log in with">
         <div class="signin-alternative">
           <v-btn class="login-btn" round ripple>
             <v-avatar size="32">
               <v-img sizes="32" :src="require('../../assets/g+.png')"></v-img>
-            </v-avatar>&nbsp;&nbsp;&nbsp; Sign in with Google&nbsp;
+            </v-avatar>&nbsp;&nbsp;&nbsp; Log in with Google&nbsp;
           </v-btn>
           <br>
           <v-btn class="login-btn" round ripple>
             <v-avatar size="32">
               <v-img sizes="32" :src="require('../../assets/facebook.png')"></v-img>
-            </v-avatar>&nbsp; Sign in with Facebook
+            </v-avatar>&nbsp; Log in with Facebook
           </v-btn>
         </div>
       </v-card>
       <v-card class="float-card" v-if="LoginContext === 'Reg'" key="reg">
-        <v-card-text>อะฮี่ๆๆๆๆๆ</v-card-text>
+        <v-card-title>Registration form</v-card-title>
         <v-form ref="form">
           <v-container>
             <v-layout wrap row justify-center>

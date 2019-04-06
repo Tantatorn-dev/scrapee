@@ -4,7 +4,6 @@
     <v-content>
       <router-view></router-view>
     </v-content>
-    <LoginModal/>
   </v-app>
 </template>
 
