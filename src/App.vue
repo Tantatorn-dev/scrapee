@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import AppBar from "./components/AppBar";
+import AppBar from "./components/AppBar/AppBar";
 import LoginModal from './components/LoginModal/LoginModal';
 export default {
   name: "App",

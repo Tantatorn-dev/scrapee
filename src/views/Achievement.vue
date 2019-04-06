@@ -3,12 +3,6 @@
     <v-layout row>
       <v-flex>
         <v-card>
-          <v-toolbar color="light-blue" dark>
-            <v-toolbar-side-icon></v-toolbar-side-icon>
-            <v-toolbar-title>Achievement</v-toolbar-title>
-            <v-spacer></v-spacer>
-          </v-toolbar>
-
           <v-list two-line subheader>
             <v-list-tile v-for="item in items" :key="item.title" avatar>
               <v-list-tile-avatar>
