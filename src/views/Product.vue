@@ -24,10 +24,20 @@
                 eiusmod tempor incididunt ut labore et dolore magna aliqua.
               </div>
               <div class="mt-3">
-                <span primary class="title">US $500.00</span>
+                <span primary class="title"
+                  >US ${{ Math.round(Math.random() * 50) + 50 }} -
+                  {{ Math.round(Math.random() * 100) + 70 }}
+                </span>
                 <span class="grey--text">/price</span>
               </div>
-              <span>1,000 prices</span>
+              <span
+                >{{
+                  new Intl.NumberFormat().format(
+                    Math.round(Math.random() * 2000) + 1
+                  )
+                }}
+                Prices</span
+              >
             </div>
           </v-card-title>
         </v-card>
