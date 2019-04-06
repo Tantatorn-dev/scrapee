@@ -47,23 +47,10 @@ export default new Router({
       component: () => import(/* webpackChunkName: "map" */ "./views/Map.vue")
     },
     {
-      path: "/achievement",
-      name: "achievement",
+      path: "/product",
+      name: "product",
       component: () =>
-        import(/* webpackChunkName: "achievement" */ "./views/Achievement.vue")
-    },
-    {
-      path: "/reward",
-      name: "reward",
-      component: () =>
-        import(/* webpackChunkName: "reward" */ "./views/Reward.vue")
-    },
-
-    {
-      path: "/profile",
-      name: "profile",
-      component: () =>
-        import(/* webpackChunkName: "profile" */ "./views/Profile.vue")
+        import(/* webpackChunkName: "product" */ "./views/Product.vue")
     }
   ]
 });
