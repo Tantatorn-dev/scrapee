@@ -105,7 +105,9 @@ export default {
       });
 
       new MarkerClusterer(map, markers["garbage"], {
-        imagePath: "/img/map/m"
+        imagePath: "/img/map/m",
+        averageCenter: true,
+        maxZoom: 21
       });
 
       /* Change markers on zoom */
