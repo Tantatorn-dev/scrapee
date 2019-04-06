@@ -45,6 +45,12 @@ export default new Router({
       path: "/map",
       name: "map",
       component: () => import(/* webpackChunkName: "map" */ "./views/Map.vue")
+    },
+    {
+      path: "/achievement",
+      name: "achievement",
+      component: () =>
+        import(/*webpackChunkName: "achievement*/ "./views/Achievement.vue")
     }
   ]
 });
