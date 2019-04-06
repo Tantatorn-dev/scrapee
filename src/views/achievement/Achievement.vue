@@ -39,20 +39,30 @@
 </template>
 
 <script>
-  export default {
-    name: 'Achievement',
-    data(){
-      return {
-        items: [
-          { icon: 'attach_money', iconClass: 'red lighten-1 white--text', title: 'The great trash keeper', subtitle: 'Make 10 changes' },
-          { icon: 'attach_money', iconClass: 'red lighten-1 white--text', title: 'Environmental Guardian', subtitle: 'Make 100 changes' },
-          { icon: 'attach_money', iconClass: 'amber white--text', title: 'Mr. cleaner', subtitle: 'Make 1 change' },
-          { icon: 'attach_money', iconClass: 'amber white--text', title: 'Merry go green', subtitle: 'Make a change in the suburban area' },
-          { icon: 'attach_money', iconClass: 'red lighten-1 white--text', title: 'Everywhere man', subtitle: 'Make 10 changes in different countries' }
-        ]
-      }
-    }
-  }
+export default {
+  name: 'Achievement',
+  data() {
+    return {
+      items: [
+        {
+          icon: 'attach_money', iconClass: 'red lighten-1 white--text', title: 'The great trash keeper', subtitle: 'Make 10 changes',
+        },
+        {
+          icon: 'attach_money', iconClass: 'red lighten-1 white--text', title: 'Environmental Guardian', subtitle: 'Make 100 changes',
+        },
+        {
+          icon: 'attach_money', iconClass: 'amber white--text', title: 'Mr. cleaner', subtitle: 'Make 1 change',
+        },
+        {
+          icon: 'attach_money', iconClass: 'amber white--text', title: 'Merry go green', subtitle: 'Make a change in the suburban area',
+        },
+        {
+          icon: 'attach_money', iconClass: 'red lighten-1 white--text', title: 'Everywhere man', subtitle: 'Make 10 changes in different countries',
+        },
+      ],
+    };
+  },
+};
 </script>
 
 <style>

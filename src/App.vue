@@ -5,16 +5,17 @@
 </template>
 
 <script>
-import Achievement from "./views/achievement/Achievement";
+import Achievement from './views/achievement/Achievement';
+
 export default {
   name: 'App',
   components: {
-    Achievement
+    Achievement,
   },
-  data () {
+  data() {
     return {
     //
-    }
-  }
-}
+    };
+  },
+};
 </script>

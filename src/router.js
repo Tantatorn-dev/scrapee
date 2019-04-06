@@ -1,12 +1,12 @@
-import Vue from 'vue'
-import Router from 'vue-router'
-import App from './App.vue'
-import goTo from "vuetify/lib/components/Vuetify/goTo";
+import Vue from 'vue';
+import Router from 'vue-router';
+import goTo from 'vuetify/lib/components/Vuetify/goTo';
+import App from './App.vue';
 
-Vue.use(Router)
+Vue.use(Router);
 
 export default new Router({
-  mode: "history",
+  mode: 'history',
   base: __dirname,
   scrollBehavior(to, from, savedPosition) {
     let scrollTo = 0;
@@ -19,7 +19,7 @@ export default new Router({
       scrollTo = savedPosition.y;
     }
 
-    return new Promise(resolve => {
+    return new Promise((resolve) => {
       goTo(scrollTo).then(() => {
         resolve({ x: 0, y: scrollTo });
       });
@@ -29,7 +29,7 @@ export default new Router({
     {
       path: '/',
       name: 'home',
-      component: App
-    }
-  ]
-})
+      component: App,
+    },
+  ],
+});
