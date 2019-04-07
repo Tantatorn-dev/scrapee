@@ -4,9 +4,11 @@
       <v-flex xs12>
         <v-breadcrumbs :items="items" divider=">">
           <template v-slot:item="props">
-            <router-link :to="props.item.to">{{
-              props.item.text.toUpperCase()
-            }}</router-link>
+            <router-link
+              :to="props.item.to"
+              :class="[props.item.disabled && 'disabled']"
+              >{{ props.item.text.toUpperCase() }}</router-link
+            >
           </template>
         </v-breadcrumbs>
       </v-flex>
@@ -28,38 +30,44 @@
             <v-flex xs7>
               <v-card tile flat>
                 <v-card-title>
-                  <div style="width: 100%;">
-                    <div class="title">
+                  <div>
+                    <span class="title">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                       sed do eiusmod tempor incididunt ut labore et dolore magna
                       aliqua.
-                    </div>
-                    <div class="mt-3">
+                    </span>
+                    <br />
+                    <span class="mt-3">
                       <span primary class="subheading"
                         >US ${{ Math.round(Math.random() * 50) + 50 }} -
                         {{ Math.round(Math.random() * 100) + 70 }}
                       </span>
                       <span class="grey--text">/price</span>
-                    </div>
-                    <div>
-                      <span
-                        >{{
-                          new Intl.NumberFormat().format(
-                            Math.round(Math.random() * 2000) + 1
-                          )
-                        }}
-                        Prices</span
-                      >
-                    </div>
+                    </span>
+                    <br />
+                    <span>
+                      {{
+                        new Intl.NumberFormat().format(
+                          Math.round(Math.random() * 2000) + 1
+                        )
+                      }}
+                      Prices
+                    </span>
                   </div>
-                  <v-divider />
+                </v-card-title>
+                <v-divider />
+                <v-card-title style="background-color: whitesmoke;">
+                  <v-btn color="warning"
+                    ><v-icon>mail_outline</v-icon>&nbsp;Contact Supplier</v-btn
+                  >
+                  <v-btn color="warning" outline>Start Order</v-btn>
+                </v-card-title>
+                <v-divider />
+                <v-card-title>
                   <div>
-                    <v-btn color="warning"
-                      ><v-icon>mail_outline</v-icon>&nbsp;Contact
-                      Supplier</v-btn
-                    >
+                    <span>Payment: บัตรสวัสดิการแห่งรัฐ</span><br />
+                    <span>Shipping: ไปรษณีย์ไทย</span>
                   </div>
-                  <v-divider />
                 </v-card-title>
               </v-card>
             </v-flex>
@@ -90,10 +98,18 @@ export default {
         },
         {
           text: this.$route.params.num + "",
-          to: ""
+          to: "",
+          disabled: true
         }
       ];
     }
   }
 };
 </script>
+
+<style>
+.disabled {
+  color: grey;
+  pointer-events: none;
+}
+</style>
