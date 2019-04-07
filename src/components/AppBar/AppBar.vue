@@ -1,6 +1,6 @@
 <template>
   <v-toolbar app fixed>
-    <v-img v-bind:src="require('@/assets/scrapee.png')"></v-img>
+    <v-img :src="require('@/assets/scrapee.png')"></v-img>
     <v-btn flat to="/"><v-icon>home</v-icon></v-btn>
 
     <Category></Category>
@@ -16,7 +16,7 @@
       <span class="mr-2">About</span>
     </v-btn>
     <div v-if="!isLogin">
-      <login-modal :onLogin="login"></login-modal>
+      <login-modal :on-login="login"></login-modal>
     </div>
     <div v-else>
       <v-btn large light flat to="/profile">
@@ -43,9 +43,9 @@ export default {
       isLogin: true
     };
   },
-  methods:{
-    login(){
-      this.isLogin = true
+  methods: {
+    login() {
+      this.isLogin = true;
     }
   }
 };

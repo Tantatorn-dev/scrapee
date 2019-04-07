@@ -1,14 +1,14 @@
 <template>
   <div>
-    <AddTransactionModal :onAccept="addTransaction"/>
+    <AddTransactionModal :on-accept="addTransaction" />
     <v-layout row wrap>
       <v-flex
+        v-for="item in transactionList"
+        :key="item.order"
         class="transaction-list"
         lg4
         xs12
         md4
-        v-for="item in transactionList"
-        :key="item.order"
       >
         <Transaction
           :remove="removeTransaction"
@@ -26,6 +26,10 @@ import Transaction from "../../components/Transaction/Transaction";
 import AddTransactionModal from "../../components/AddTransactionModal/AddTransactionModal";
 
 export default {
+  components: {
+    Transaction,
+    AddTransactionModal
+  },
   data() {
     return {
       transactionList: [
@@ -49,10 +53,6 @@ export default {
         }
       ]
     };
-  },
-  components: {
-    Transaction,
-    AddTransactionModal
   },
   methods: {
     removeTransaction(item) {
