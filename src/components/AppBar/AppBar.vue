@@ -1,5 +1,5 @@
 <template>
-  <v-toolbar fixed>
+  <v-toolbar fixed app>
 
     <v-img v-bind:src="require('@/assets/scrapee.png')" ></v-img>
 
