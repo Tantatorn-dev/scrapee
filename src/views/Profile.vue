@@ -1,4 +1,5 @@
 <template>
+<div>
   <v-container fill-height fluid grid-list-xl>
     <v-layout justify-center wrap>
       <v-flex xs12 md4>
@@ -25,12 +26,17 @@
       </v-flex>
     </v-layout>
   </v-container>
+  <Dashboard></Dashboard>
+</div>
 </template>
 
 <script>
+import Dashboard from "@/views/Dashboard/Dashboard";
 export default {
-  name: "Profile"
-  //
+  name: "Profile",
+  components: {
+    Dashboard
+  }
 };
 </script>
 

@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <v-app app>
     <AppBar></AppBar>
     <v-content>
       <router-view></router-view>
@@ -11,7 +11,7 @@
 import AppBar from "./components/AppBar/AppBar";
 export default {
   name: "App",
-  components: {
+  components:{
     AppBar
   },
   data() {
