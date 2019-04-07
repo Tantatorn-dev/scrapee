@@ -3,19 +3,29 @@
     <v-layout>
       <v-flex xs12>
         <v-card dark tile flat color="primary">
-          <v-card-text class="display-1">{{ title }}</v-card-text>
+          <v-img :src="`/img/banners/${$route.params.search}.png`"> </v-img>
         </v-card>
       </v-flex>
     </v-layout>
     <v-container grid-list-md fluid>
       <v-layout row wrap>
         <v-flex v-for="n in 40" :key="n" xs3 class="border">
-          <v-card hover>
+          <v-card
+            hover
+            :to="{
+              name: 'productDetail',
+              params: {
+                search: $route.params.search,
+                num: n
+              },
+              query: {
+                search: search
+              }
+            }"
+          >
             <v-img
               :src="
-                `https://loremflickr.com/300/300/${
-                  $route.params.search
-                }&random=${Math.random()}`
+                `https://loremflickr.com/300/300/${search}?lock=${n}&random=${Math.random()}`
               "
               height="300px"
             >
@@ -61,11 +71,18 @@
 <script>
 export default {
   computed: {
-    title() {
-      var title = this.$route.params.search;
-      title = title.replace(",", " ");
-      title = title.charAt(0).toUpperCase() + title.slice(1);
-      return title;
+    search() {
+      var keyword = {
+        "cell phones": "cell phones",
+        "gas stoves": "gas stove",
+        laptops: "computer,laptops",
+        "lcd monitors": "lcd monitor",
+        microwaves: "microwaves,oven",
+        pc: "pc",
+        refrigerators: "refrigerators",
+        "washing machines": "washing machines"
+      };
+      return keyword[this.$route.params.search] || this.$route.params.search;
     }
   }
 };
