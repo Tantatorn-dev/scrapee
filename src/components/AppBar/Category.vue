@@ -1,10 +1,13 @@
 <template>
-  <div class="text-xs-center">
-    <v-menu offset-y>
+  <div class="text-xs-center category" >
+    <v-menu offset-y >
       <template v-slot:activator="{ on }">
         <v-btn
-          color="#FFFFFF"
+          large
           v-on="on"
+          class="dropdown"
+          light
+          flat
         >
           Category
         </v-btn>
@@ -13,7 +16,6 @@
         <v-list-tile
           v-for="(item, index) in items"
           :key="index"
-          @click=""
         >
           <v-list-tile-title>{{ item.title }}</v-list-tile-title>
         </v-list-tile>
@@ -26,11 +28,19 @@
   export default {
     data: () => ({
       items: [
-        { title: 'Computer and telecommunication' },
-        { title: 'Refrigerator' },
-        { title: 'Toys, leisure' },
-        { title: 'Lighting device' }
+        { title: 'Computer and Telecommunication' },
+        { title: 'Major Appliance' },
+        { title: 'Minor Appliance' },
       ]
     })
   }
 </script>
+
+<style scoped>
+.dropdown{
+  margin-bottom: 15px;
+}
+.category{
+  padding-top: 8px;
+}
+</style>

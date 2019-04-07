@@ -1,21 +1,18 @@
 <template>
-  <v-app>
+  <v-app app>
     <AppBar></AppBar>
     <v-content>
       <router-view></router-view>
     </v-content>
-    <LoginModal/>
   </v-app>
 </template>
 
 <script>
 import AppBar from "./components/AppBar/AppBar";
-import LoginModal from './components/LoginModal/LoginModal';
 export default {
   name: "App",
-  components: {
-    AppBar,
-    LoginModal
+  components:{
+    AppBar
   },
   data() {
     return {
