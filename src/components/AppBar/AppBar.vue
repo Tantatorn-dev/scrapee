@@ -19,11 +19,9 @@
       <login-modal :onLogin="login"></login-modal>
     </div>
     <div v-else>
-      <router-link to="/profile">
-      <v-btn large light flat>
+      <v-btn large light flat to="/profile">
         My Account
       </v-btn>
-      </router-link>
     </div>
   </v-toolbar>
 </template>
@@ -42,7 +40,7 @@ export default {
   data() {
     return {
       onPopUp: false,
-      isLogin: false
+      isLogin: true
     };
   },
   methods:{
