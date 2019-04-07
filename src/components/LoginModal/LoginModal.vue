@@ -91,6 +91,7 @@ export default {
       active: false,
       mailrules: [
         v => !!v || "E-mail is required",
+        // eslint-disable-next-line
         v => /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(v) || "E-mail must be valid"
       ],
       passrules: [v => (!!v && v) === this.passMatch || "Values do not match"]
