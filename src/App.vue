@@ -11,7 +11,7 @@
 import AppBar from "./components/AppBar/AppBar";
 export default {
   name: "App",
-  components:{
+  components: {
     AppBar
   },
   data() {
