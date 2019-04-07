@@ -4,17 +4,16 @@
     <v-content>
       <router-view></router-view>
     </v-content>
+    <Dashboard/>
   </v-app>
 </template>
 
 <script>
-import AppBar from "./components/AppBar/AppBar";
-import LoginModal from './components/LoginModal/LoginModal';
+import Dashboard from "./views/Dashboard/Dashboard";
 export default {
   name: "App",
   components: {
-    AppBar,
-    LoginModal
+    Dashboard
   },
   data() {
     return {
