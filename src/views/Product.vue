@@ -1,5 +1,5 @@
 <template>
-  <v-container grid-list-xs fluid>
+  <v-container grid-list-md fluid>
     <v-layout row wrap>
       <v-flex
         v-for="n in 40"
@@ -11,10 +11,19 @@
         <v-card hover>
           <v-img
             :src="
-              `https://loremflickr.com/300/300/electronics&random=${Math.random()}`
+              `https://loremflickr.com/300/300/electronics,component&random=${Math.random()}`
             "
             height="200px"
-          ></v-img>
+          >
+            <template v-slot:placeholder>
+              <v-layout fill-height align-center justify-center ma-0>
+                <v-progress-circular
+                  indeterminate
+                  color="grey lighten-1"
+                ></v-progress-circular>
+              </v-layout>
+            </template>
+          </v-img>
           <v-card-title>
             <div style="width: 100%;">
               <div class="text-truncate">
