@@ -4,9 +4,10 @@
       <template v-slot:activator="{ on }">
         <v-btn
           large
-          color="#FFFFFF"
           v-on="on"
           class="dropdown"
+          light
+          flat
         >
           Category
         </v-btn>

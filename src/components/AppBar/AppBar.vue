@@ -1,6 +1,7 @@
 <template>
   <v-toolbar app fixed>
     <v-img v-bind:src="require('@/assets/scrapee.png')"></v-img>
+    <v-btn flat to="/"><v-icon>home</v-icon></v-btn>
 
     <Category></Category>
 
@@ -14,8 +15,16 @@
     <v-btn flat to="/about">
       <span class="mr-2">About</span>
     </v-btn>
-
-    <login-modal></login-modal>
+    <div v-if="!isLogin">
+      <login-modal :onLogin="login"></login-modal>
+    </div>
+    <div v-else>
+      <router-link to="/profile">
+      <v-btn large light flat>
+        My Account
+      </v-btn>
+      </router-link>
+    </div>
   </v-toolbar>
 </template>
 
@@ -32,8 +41,14 @@ export default {
   },
   data() {
     return {
-      onPopUp: false
+      onPopUp: false,
+      isLogin: false
     };
+  },
+  methods:{
+    login(){
+      this.isLogin = true
+    }
   }
 };
 </script>

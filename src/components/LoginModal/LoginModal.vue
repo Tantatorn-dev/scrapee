@@ -14,7 +14,7 @@
               </v-flex>
               <v-flex md9 justify-center>
                 <div class="div-center">
-                  <v-btn color="primary">Log &nbsp;in</v-btn>
+                  <v-btn color="primary" @click="onLogin()">Log &nbsp;in</v-btn>
                   <v-btn color="primary" @click="LoginContext = 'Reg'">Register</v-btn>
                 </div>
               </v-flex>
@@ -125,7 +125,9 @@ export default {
       alert("success");
     }
   },
-  props: []
+  props: {
+    onLogin:Function
+  }
 };
 </script>
 
