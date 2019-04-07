@@ -24,9 +24,7 @@
             }"
           >
             <v-img
-              :src="
-                `https://loremflickr.com/300/300/${search}?lock=${n}&random=${Math.random()}`
-              "
+              :src="`https://loremflickr.com/300/300/${search}?lock=${n}`"
               height="300px"
             >
               <template v-slot:placeholder>
