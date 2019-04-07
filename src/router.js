@@ -53,6 +53,12 @@ export default new Router({
         import(/* webpackChunkName: "product" */ "./views/Product.vue")
     },
     {
+      path: "/product/:search/:num",
+      name: "productDetail",
+      component: () =>
+        import(/* webpackChunkName: "productDetail" */ "./views/ProductDetail.vue")
+    },
+    {
       path: "/profile",
       name: "profile",
       component: () =>
