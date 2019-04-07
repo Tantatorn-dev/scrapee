@@ -2,7 +2,7 @@
   <v-layout row justify-center>
     <v-dialog v-model="active" max-width="600px">
       <template v-slot:activator="{on}">
-        <v-btn color="primary" v-on="on">Add Transaction</v-btn>
+        <v-btn color="primary" outline v-on="on">Add Transaction</v-btn>
       </template>
       <v-card>
         <v-card-title>

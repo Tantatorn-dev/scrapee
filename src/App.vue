@@ -1,19 +1,18 @@
 <template>
-  <v-app>
+  <v-app app>
     <AppBar></AppBar>
     <v-content>
       <router-view></router-view>
     </v-content>
-    <Dashboard/>
   </v-app>
 </template>
 
 <script>
-import Dashboard from "./views/Dashboard/Dashboard";
+import AppBar from "./components/AppBar/AppBar";
 export default {
   name: "App",
-  components: {
-    Dashboard
+  components:{
+    AppBar
   },
   data() {
     return {
