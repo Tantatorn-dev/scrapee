@@ -88,7 +88,7 @@ export default {
 <style scoped>
 .text-1 {
   color: white;
-  padding-top: 150px;
+  padding-top: 250px;
   margin-left: 30px;
 }
 .text-2 {
@@ -98,7 +98,7 @@ export default {
   margin-left: 30px;
 }
 .text-3 {
-  padding-top: 160px;
+  padding-top: 220px;
   margin: 30px;
   color: white;
 }
