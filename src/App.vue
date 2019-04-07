@@ -2,23 +2,25 @@
   <v-app>
     <Achievement></Achievement>
     <LoginModal/>
+    <Dashboard/>
   </v-app>
 </template>
 
 <script>
-import Achievement from './views/achievement/Achievement';
-import LoginModal from './components/LoginModal/LoginModal';
-
+import Achievement from "./views/achievement/Achievement";
+import LoginModal from "./components/LoginModal/LoginModal";
+import Dashboard from "./views/Dashboard/Dashboard";
 export default {
-  name: 'App',
+  name: "App",
   components: {
     Achievement,
-    LoginModal
+    LoginModal,
+    Dashboard
   },
   data() {
     return {
-    //
+      //
     };
-  },
+  }
 };
 </script>
