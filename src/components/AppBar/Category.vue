@@ -27,10 +27,9 @@
   export default {
     data: () => ({
       items: [
-        { title: 'Computer and telecommunication' },
-        { title: 'Refrigerator' },
-        { title: 'Toys, leisure' },
-        { title: 'Lighting device' }
+        { title: 'Computer and Telecommunication' },
+        { title: 'Major Appliance' },
+        { title: 'Minor Appliance' },
       ]
     })
   }

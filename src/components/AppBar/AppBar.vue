@@ -1,6 +1,9 @@
 <template>
   <v-toolbar fixed>
+
     <v-img v-bind:src="require('@/assets/scrapee.png')" ></v-img>
+
+
     <Category></Category>
     
     <v-spacer></v-spacer>

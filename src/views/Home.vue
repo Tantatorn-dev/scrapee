@@ -40,13 +40,14 @@
         xs3
         class="border"
       >
+      <router-link :to="`product/${search_keyword[n-1]}`">
         <v-card flat tile hover>
           <v-img
             :src="require(`@/assets/1${n}.png`)"
             height="300px"
           ></v-img>
-          
         </v-card>
+      </router-link>
       </v-flex>
     </v-layout>
 
@@ -59,13 +60,14 @@
         xs3
         class="border"
       >
+      <router-link :to="`product/${search_keyword[n+3]}`">
         <v-card flat tile hover>
           <v-img
             :src="require(`@/assets/2${n}.png`)"
             height="300px"
           ></v-img>
-          
-        </v-card>
+        </v-card> 
+        </router-link>
       </v-flex>
     </v-layout>
   </v-container>
@@ -74,6 +76,11 @@
 <script>
 export default {
   name: "Home",
+  data(){
+    return{
+      search_keyword:["laptops","lcd monitors","cell phones","pc","refrigerators","washing machines","microwaves","gas stoves"]
+    }
+  }
 };
 </script>
 
