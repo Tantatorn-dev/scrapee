@@ -1,5 +1,5 @@
 <template>
-  <v-container grid-list-md fluid fill-height>
+  <v-container grid-list-xs fluid>
     <v-layout row wrap>
       <v-flex
         v-for="n in 40"
@@ -8,12 +8,10 @@
         class="border"
         :class="n % 5 == 1 ? 'offset-xs1' : ''"
       >
-        <v-card flat tile hover>
+        <v-card hover>
           <v-img
             :src="
-              `https://unsplash.it/200/300?image=${Math.floor(
-                Math.random() * 100
-              ) + 1}`
+              `https://loremflickr.com/300/300/electronics&random=${Math.random()}`
             "
             height="200px"
           ></v-img>
