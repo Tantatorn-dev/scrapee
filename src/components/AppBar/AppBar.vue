@@ -1,19 +1,20 @@
 <template>
-  <v-toolbar prominent extended>
-
-    <v-toolbar-title>Title</v-toolbar-title>
+  <v-toolbar fixed>
+    <v-img v-bind:src="require('@/assets/scrapee.png')" ></v-img>
+    <Category></Category>
+    
     <v-spacer></v-spacer>
+    
+    <v-layout  align-center >
+      <v-icon>search</v-icon>
+      <SearchField></SearchField>
+    </v-layout>
+
     <v-btn flat to="/about">
       <span class="mr-2">About</span>
     </v-btn>
     <login-modal></login-modal>
 
-    <template v-slot:extension>
-      <Category></Category>
-      <v-layout justify-center align-center>
-      <SearchField></SearchField>
-      </v-layout>
-    </template>
   </v-toolbar>
 </template>
 
@@ -28,10 +29,10 @@ export default {
     SearchField,
     LoginModal
   },
-  data(){
-    return{
-      onPopUp:false
-    }
+  data() {
+    return {
+      onPopUp: false
+    };
   }
 };
 </script>

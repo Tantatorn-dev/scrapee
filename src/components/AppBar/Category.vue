@@ -1,6 +1,6 @@
 <template>
-  <div class="text-xs-center">
-    <v-menu offset-y>
+  <div class="text-xs-center category" >
+    <v-menu offset-y >
       <template v-slot:activator="{ on }">
         <v-btn
           large
@@ -15,7 +15,6 @@
         <v-list-tile
           v-for="(item, index) in items"
           :key="index"
-          @click=""
         >
           <v-list-tile-title>{{ item.title }}</v-list-tile-title>
         </v-list-tile>
@@ -40,5 +39,8 @@
 <style scoped>
 .dropdown{
   margin-bottom: 15px;
+}
+.category{
+  padding-top: 8px;
 }
 </style>

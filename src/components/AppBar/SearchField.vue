@@ -1,6 +1,6 @@
 <template>
-  <v-flex xs12 sm6 md3>
-    <v-text-field label="Solo" placeholder="Search" solo></v-text-field>
+  <v-flex xs12 sm6 md10 mt-2>
+    <v-text-field  placeholder="Search" outline class="searchfield"></v-text-field>
   </v-flex>
 </template>
     
@@ -11,4 +11,6 @@ export default {
 </script>
 
 <style scoped>
+
+  
 </style>

@@ -72,7 +72,7 @@
     </v-dialog>
     <v-btn
       round
-      color="success"
+      color="#4e5d6b"
       flat="flat"
       @click="isSignin = !isSignin; active = true;"
     >Log in or Sign up</v-btn>
