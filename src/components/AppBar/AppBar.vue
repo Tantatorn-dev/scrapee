@@ -1,7 +1,9 @@
 <template>
   <v-toolbar app fixed>
     <v-img :src="require('@/assets/scrapee.png')"></v-img>
-    <v-btn flat to="/"><v-icon>home</v-icon></v-btn>
+    <router-link flat to="/" style="color: aliceblue;"
+      ><v-icon>home</v-icon></router-link
+    >
 
     <Category></Category>
 
